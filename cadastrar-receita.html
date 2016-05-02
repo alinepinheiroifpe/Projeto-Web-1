@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Minhas Finanças | Cadastrar Receita</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Link para o CSS -->
+		<link rel="stylesheet" href="css/MeuCss.css"> <!-- Link para o css próprio do projeto -->
+		<script src="js/jquery-1.12.2.min.js"></script> <!-- Link para o jquery -->
+		<script src="js/bootstrap.min.js"></script> <!-- Link para o JavaScript -->
+		
+	</head>
+	<body style="height:1000px" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!-- Navbar ---------------------------------------------------------------------------------------------->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand "href="painel.html"><img alt="logo" src="img/money-logo.png" width="45px"></img></a>
+			<a class="navbar-brand" href="painel.html">Minhas Finanças</a>
+		</div>
+		<!-- Lado direito da navbar-->
+		<ul class="nav navbar-nav navbar-right" >
+		
+			<!-- Dropdown -->
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Allan Santos
+				<span class="glyphicon glyphicon-user"></span>
+				<span class="caret"></span>
+			  </a>
+			   <ul class="dropdown-menu">
+			  
+				<li><a href="editar-conta.html"><span class="glyphicon glyphicon-pencil"></span>	Editar Conta</a></li>
+				<li><a href="configuracoes.html"><span class="glyphicon glyphicon-cog"></span>	Configurações	</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
+			  </ul>
+			</li>
+			
+		</ul>
+	  </div>
+	</nav> 
+	
+	<div class="row"> <!-- linha 1 -->
+		<!-- Coluna 1 -->
+		<div class="col-sm-3 col-xs-6">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation"><a href="Painel.html"><font size="3"><span class="glyphicon glyphicon-dashboard"></span>	Painel</font></a></li>
+				
+				<!-- Dropdown Receita -->
+				<li class="dropdown active" > <!-- Para cada página tem que modificar o active aqui e o breadcrumb lá embaixo -->
+				  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3"><span class="glyphicon glyphicon-usd"></span>	
+				  	Receitas	<span class="caret"></span></font></a>
+				  <ul class="dropdown-menu dropdown-menu-right">
+					<li class="active"><a href="cadastrar-receita.html"><font size="3"><span class="glyphicon glyphicon-plus"></span>	Cadastrar Receita</font></a></li>
+					<li><a href="visualizar-receita.html"><font size="3"><span class="glyphicon glyphicon-list-alt"></span>	Visualizar Receitas</font></a></li>                        
+				  </ul>
+				</li>
+				
+				<!-- Dropdown Despesa -->
+				<li class="dropdown">
+				  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3"><span class="glyphicon glyphicon-alert"></span>
+				  	Despesas	<span class="caret"></span></font></a>
+				  <ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="cadastrar-despesa.html"><font size="3"><span class="glyphicon glyphicon-plus"></span>	Cadastrar Despesa</font></a></li>
+					<li><a href="visualizar-despesa.html"><font size="3"><span class="glyphicon glyphicon-list-alt"></span>	Visualizar Despesas</font></a></li>                        
+				  </ul>
+				</li>
+				<!-- Dropdown Categoria de despesa -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">
+					<span class="glyphicon glyphicon-tag"></span>	Categorias de Despesa	<span class="caret"></font></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="cadastrar-categoria.html"><font size="3"><span class="glyphicon glyphicon-plus"></span>	Cadastrar Categoria</font></a></li>
+						<li><a href="visualizar-categoria.html"><font size="3"><span class="glyphicon glyphicon-list-alt"></span>	Visualizar Categorias</font></a></li>
+					</ul>
+				</li>
+				<!-- Dropdown Balanço-->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">
+					<span class="glyphicon glyphicon-stats"></span>	Gráficos	<span class="caret"></font></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="graficos-receita.html"><font size="3"><span class="glyphicon glyphicon-usd"></span>	Receita</font></a></li>
+						<li><a href="graficos-despesa.html"><font size="3"><span class="glyphicon glyphicon-alert"></span>	Despesa</font></a></li>
+						<li><a href="graficos-balanco.html"><font size="3"><span class="glyphicon glyphicon-tasks"></span>	Balanço</font></a></li>
+					</ul>
+				</li>
+			</ul> <!-- /.navbar-static-side -->
+		</div> <!-- Fim da coluna 1 -->
+		
+		
+		<!-- Modificação -->
+		<div class="col-sm-8">
+			<h1 class="page-header"><font color="#23527C"><span class="glyphicon glyphicon-plus"></span>
+									Cadastrar Receita</font></h1>
+			
+			<!-- Breadcrumb -->
+			<ol class="breadcrumb">
+				<li><a href="#">Receitas</a></li>
+				<li class="active">Cadastrar Receita</li>
+			</ol>
+		</div>
+
+		<div class="col-sm-8 col-xs-6">
+			<div class="panel panel-default">
+				<div class="panel-heading" align="center">Receita</div>
+				<div class="panel-body">
+					<!-- Início -->
+					<form role="form" action="painel.html" >
+						<div class="form-group">
+							<label>Data</label> <input type="date" value="2016-05-03" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Descrição</label> <input type="text" name="descricao" id="descricao" class="form-control"
+							placeholder="Digite a descrição da receita" required>
+							<p class="help-block">Meu salário, hora extra, adicional</p>
+						</div>
+						<div class="form-group">
+							<label>Valor</label> <input type="text" name="valor" id="valor" class="form-control" placeholder="Digite o valor da receita" 
+							required>
+							<p class="help-block">Valores como 100,00</p>
+						</div>
+						<div class="form-group">
+							<label>Tipo</label> <br>
+							<label class="radio-inline"> <input type="radio" name="tipo" id="tipo" value="Fixa" checked>Fixa
+							</label> <label class="radio-inline"> <input type="radio" name="tipo" id="tipo" value="Variável">Variável</label>
+						</div>
+						<div class="form-group">
+							<label>Intervalo</label> 
+							<input type="number" class="form-control" min="1" max="20" placeholder="Intervalo de ocorrência da receita">
+						</div>
+						<div class="form-group">
+							<select name="intervalo_tempo" id="intevalo_tempo" class="form-control">
+								<option value="">Selecione o intervalo</option>
+								<option value="Dia(s)">Dia(s)</option>
+								<option value="Semana(s)">Semana(s)</option>
+								<option value="Mês(es)">Mês(es)</option>
+								<option value="Ano(s)">Ano(s)</option>
+							</select>
+						</div>
+						<button type="button" onclick="window.location.href='painel.html'" class="btn btn-danger">Cancelar</button>
+						<button type="submit" class="btn btn-success">Salvar</button>
+					</form>
+				</div> <!--/Fim do corpo do painel -->
+			</div> <!-- Fim do painel -->
+		</div> <!-- Fim da coluna -->							
+					
+			
+			<!-- Início da coluna 2 
+			<div class="col-sm-9 col-xs-6">
+				<h2 class="page-header"><font color="#23527C"><span class="glyphicon glyphicon-plus"></span>
+											Cadastrar Receita</font></h2>
+											
+				<!-- Breadcrumb 
+				<ol class="breadcrumb">
+					<li><a href="#">Receitas</a></li>
+					<li><a href="visualizar-receitas.html">Visualizar Receitas</a></li>
+					<li class="active">Cadastrar Receita</li>
+				</ol>
+			</div>
+		
+		<!-- Formulário ------------------------------------------------------------------------------------------------->
+
+		
+
+		
+		<!--
+		<!-- Coluna 2
+		<div class="col-sm-9 col-xs-6">
+			<!-- Migalhas de pão para indicar ao usuário em que parte do site ele está (na árvore de páginas)
+			<ol class="breadcrumb">
+				<li><a href="Painel.html"><font size="3">Painel</font></a></li>
+				<li class="active"><font size="3">Cadastrar Receita</font></li>
+			</ol>
+			<!-- Conteúdo da página: form para cadastrar receita -----------------------------------------------------------------------
+			<div class="panel panel-default">
+				<div class="panel-heading" align="center">Receita</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+
+							<!-- Início --
+							<form role="form">
+								<div class="form-group">
+									<label>Data:</label> 
+									<input type="date" name="data" id="data" class="form-control" required >
+								</div>
+
+								<div class="form-group">
+									<label>Descrição:</label> 
+									<input type="text" name="descricao" id="descricao" class="form-control" 
+									placeholder="Digite a descrição da receita" required>
+									<p class="help-block">Meu salário, hora extra, adicional</p>
+								</div>
+								<div class="form-group">
+									<label>Valor</label> <input type="text" name="valor" id="valor"
+										class="form-control" placeholder="Digite o valor da receita"
+										required>
+									<p class="help-block">Valores como 100,00</p>
+								</div>
+								<div class="form-group">
+									<label>Categoria:</label> <select name="id_categoria_receita"
+										id="id_categoria_receita" class="form-control" required>
+										<option value="">Selecione a categoria</option>
+										<option value="">Alimentação</option>
+										<option value="">Educação</option>
+										<option value="">Lazer</option>																														}
+																																																?>
+								</select>
+								</div>
+								<div class="form-group">
+									<label>Tipo:</label> <br>
+									<label class="radio-inline"> <input type="radio" name="tipo"
+										id="tipo" value="Fixa" checked>Fixa:
+									</label> <label class="radio-inline"> <input type="radio"
+										name="tipo" id="tipo" value="Variável">Variável:
+									</label>
+								</div>
+								<div class="form-group">
+
+									<label>Intervalo:</label> <input type="number"
+										name="intervalo_unidade" id="intervalo_unidade"
+										class="form-control" min="1" max="20" required>
+								</div>
+								<div class="form-group">
+
+									<select name="intervalo_tempo" id="intevalo_tempo"
+										class="form-control" required>
+										<option value="">...</option>
+										<option value="Dia(s)">Dia(s)</option>
+										<option value="Semana(s)">Semana(s)</option>
+										<option value="Mês(es)">Mês(es)</option>
+										<option value="Ano(s)">Ano(s)</option>
+									</select>
+								</div>
+								<button type="button" onclick="window.location.href='painel.html'" class="btn btn-danger">Cancelar</button>
+								<button type="submit" class="btn btn-success">Salvar</button>
+						
+						
+						</div>
+						
+						</form>			
+			<!-- Falta colocar o conteúdo aqui: Mês, receita, despesa, balanço e alguns gráficos (pode ser imagem)
+			
+		</div> <!-- Fim da coluna 2
+	</div> <!-- Fim da linha 1 -->
+</body>
+
+</html>
